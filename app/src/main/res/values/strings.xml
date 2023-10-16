@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">eWING 2.0</string>
+
+    <string name="login_no_account">
+        I don\'t have an account. <font color="#2ECC40"><b>Register</b></font>
+    </string>
+    <string name="register_have_account">
+        I already have an account. <font color="#2ECC40"><b>Login</b></font>
+    </string>
+
+    <string name="google_map_api_key" tools:ignore="Typos">AIzaSyBvMOr4ftJjlnIG4Kx_D6XPcx67o4Mu1G0</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="normal_map">Normal Map</string>
+    <string name="hybrid_map">Hybrid Map</string>
+    <string name="satellite_map">Satellite Map</string>
+    <string name="terrain_map">Terrain Map</string>
+    <string name="lat_long_snippet">Lat: %1$.5f, Long: %2.5f</string>
+    <string name="dropped_pin">Dropped Pin</string>
+    <string name="poi">poi</string>
+
+    <string-array name="sort_types">
+        <item>SORT BY DATE</item>
+        <item>SORT BY NAME</item>
+        <item>SORT BY RARITY</item>
+        <item>SORT BY NOTES</item>
+        <item>SORT BY DATE</item>
+    </string-array>
+
+    <string name="add">Add</string>
+    <string name="add_image">Add Image</string>
+    <string name="description">Description</string>
+    <string name="name_of_bird">Name of bird</string>
+    <string name="add_bird_details">Add Bird Details</string>
+    <string name="delete">Delete</string>
+    <string name="todo">TODO</string>
+    <string name="add_bird_marker">Add Bird Marker</string>
+    <string name="update">Update</string>
+    <string name="address">Address</string>
+    <string name="date">Date</string>
+    <string name="name">Name</string>
+    <string name="rarity">Rarity</string>
+    <string name="confirmPassword">eg. 1234</string>
+    <string name="email">eg. ST10091167@vcconnect.edu.za</string>
+    <string name="password">eg. 1234</string>
+    <string name="registerButton">Register</string>
+    <string name="username">eg. Theodore</string>
+    <string name="login">Login</string>
+</resources>

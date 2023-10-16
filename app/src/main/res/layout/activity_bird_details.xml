@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map.bird.BirdDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/green"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/birdsDetailsTitle"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/birdsDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_bird_details"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_image"
+        app:layout_constraintTop_toBottomOf="@+id/birdsDetailsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/stLinear"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/stLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ndLinear">
+
+        <Button
+            android:id="@+id/addImageBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="@string/add_image"
+            android:textColor="#283593"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/markBirdBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="@string/add_bird_marker"
+            android:textColor="#283593"
+            android:onClick="setBirdMarker"
+            tools:ignore="VisualLintButtonSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ndLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/stLinear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/birdNote">
+
+        <EditText
+            android:id="@+id/birdName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/black_stroke_shape_white"
+            android:hint="@string/name_of_bird"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textColorHint="@color/grey"
+            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/raritySpinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/birdNote"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/black_stroke_shape_white"
+        android:hint="@string/description"
+        android:gravity="top|start"
+        android:inputType="textMultiLine|textPersonName|textImeMultiLine"
+        android:padding="6dp"
+        android:singleLine="false"
+        android:textColorHint="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/ndLinear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rdLinear"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <LinearLayout
+        android:id="@+id/rdLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/birdNote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/addBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:includeFontPadding="false"
+            android:text="@string/add"
+            android:textColor="#283593"
+            android:onClick="add"
+            tools:ignore="TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds" />
+
+        <Button
+            android:id="@+id/updateBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="@string/update"
+            android:textColor="#283593"
+            android:onClick="update"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="@string/delete"
+            android:textColor="#283593"
+            android:onClick="delete"
+            tools:ignore="VisualLintButtonSize" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
